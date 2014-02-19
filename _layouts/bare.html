@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{ page.title }} - Constantine Lignos</title>
+    <meta name="viewport" content="width=device-width"/>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css"/>
+
+  </head>
+  <body>
+
+    <div id="container">
+      <div id="content">
+{{ content }}
+      </div>
+    </div>
+    {% if site.analytics == "on" %}
+    {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>
