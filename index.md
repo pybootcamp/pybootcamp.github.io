@@ -1,6 +1,6 @@
 ---
 layout: bare
-title: Python Boot Camp - Constantine Lignos
+title: Home
 ---
 
 This is a test.
