@@ -1,0 +1,95 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Body */
+body {
+    font-family: Georgia, Palatino, "Times New Roman", Times, serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+h1.articletitle {
+    margin-bottom: 0;
+}
+
+.titleblock {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.titleblock h1{
+    margin: 0;
+}
+
+.titleblock h3 {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 3px;
+}
+
+.centered {
+    text-align:center;
+}
+
+.nobottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.notop {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#container {
+    padding: 1px;
+    width: 90%;
+    margin: auto;
+}
+
+#content {
+}
+
+img {
+    border: none;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding: 3px 0 3px 0;
+}
+
+a.name {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a.name:hover {
+    color: #FFFFFF;
+}
+
+table.topalign tr {
+    vertical-align: top;
+}
+
+table.topalign td {
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

@@ -1,5 +1,5 @@
 name: Constantine Lignos - Research
-markdown: redcarpet
+markdown: maruku
 safe: true
 lsi: false
 pygments: true
