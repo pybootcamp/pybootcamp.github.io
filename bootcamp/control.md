@@ -10,4 +10,8 @@ Use numbered headers: true
 
 # Iteration over sequences
 
+# Enumerate
+
 # `while` loops
+
+# Exceptions

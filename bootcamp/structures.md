@@ -11,3 +11,7 @@ Use numbered headers: true
 # Sequences
 
 # Containers
+
+# Maps
+
+# String formatting

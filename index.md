@@ -6,13 +6,18 @@ title: Home
 # Tutorials
 ## Basic Python
 1. [Introduction](bootcamp/introduction.html)
+1. [Writing your first program](bootcamp/firstprogram.html)
 1. [Basic data structures](bootcamp/structures.html)
 1. [Control flow](bootcamp/control.html)
 1. [List comprehensions and iterators](bootcamp/iteration.html)
 1. [Anti-patterns](bootcamp/anti-patterns.html)
 
+
 ## Modules
-TBD!
+1. csv
+1. argparse
+1. (Brief) overview of scientific/numeric computing
+1. Other topics by request!
 
 ---
 
