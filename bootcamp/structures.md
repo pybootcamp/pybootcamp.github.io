@@ -134,8 +134,6 @@ page numbers.
 and not affected by how many things are in the dictionary. This is
 unlike a `list`, where to find an item you have to check each element.
 
-## Creating dictionaries
-
 Curly braces (`{}`) are in the creation of dictionaries, while square
 braces (`[]`) are used for lookup, just like lists.
 
@@ -231,3 +229,51 @@ specifiers can do things like control the number of digits
 displayed. See the [format string
 specification](http://docs.python.org/2/library/string.html#formatstrings)
 for the gory details.
+
+# Data model
+
+As alluded to earlier, some types of data can be changed in-place
+while others cannot. The `tuple` is a type similar to a list but one
+that cannot be changed once it is created; it is _immutable_.
+
+{% highlight python %}
+>>> words1 = ['the', 'dog']
+>>> words1[1] = 'cat'
+>>> words1
+['the', 'cat']
+>>> words2 = ('the', 'dog')
+>>> words2[1] = 'cat'
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    words2[1] = 'cat'
+TypeError: 'tuple' object does not support item assignment
+{% endhighlight %}
+
+This manifests itself when considering the question "will changing
+this object affect anything else?". For example:
+{% highlight python %}
+>>> x = 7
+>>> y = 7
+>>> x += 1
+>>> x
+8
+>>> y
+7
+{% endhighlight %}
+
+As integers are immutable, at the beginning `x` and `y` refer to the
+same object but when `x` is incremented it points to a different
+object instead. However, note:
+
+{% highlight python %}
+>>> x = ['a']
+>>> y = x
+>>> x.append('b')
+>>> x
+['a', 'b']
+>>> y
+['a', 'b']
+{% endhighlight %}
+
+As lists are mutable, `append` changes the object in-place, affecting
+`x` and `y`.
