@@ -197,3 +197,13 @@ explained soon:
 
 When you're done, take a look at [cat.py](../examples/cat.py) which
 provides a solution.
+
+If you want to write another simple program, write one that counts the
+number of lines in a file. It should take the name of a single file as
+a command line argument (which can be retrieved as `sys.argv[1]`),
+count the number of lines in it, and print that number at the end. For
+example:
+{% highlight bash %}
+$ python countlines.py pp_ch1.txt
+111
+{% endhighlight %}
