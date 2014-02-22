@@ -4,9 +4,15 @@ title: Home
 ---
 
 # Tutorials
+## Basic Python
 1. [Introduction](bootcamp/introduction.html)
-2. [Basic data structures](bootcamp/structures.html)
-3. [Control flow](bootcamp/control.html)
+1. [Basic data structures](bootcamp/structures.html)
+1. [Control flow](bootcamp/control.html)
+1. [List comprehensions and iterators](bootcamp/iteration.html)
+1. [Anti-patterns](bootcamp/anti-patterns.html)
+
+## Modules
+TBD!
 
 ---
 
