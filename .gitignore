@@ -4,3 +4,6 @@ _site/
 # Editors
 *~
 *.lock
+
+# OS X
+.DS_Store
