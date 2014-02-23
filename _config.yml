@@ -1,5 +1,6 @@
 name: Python Boot Camp for Researchers
 markdown: maruku
+encoding: UTF-8
 safe: true
 lsi: false
 pygments: true
