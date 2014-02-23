@@ -155,12 +155,14 @@ example the name of the file whose contents we want to print. This is
 accomplished through a list called `argv` available through the `sys`
 module.
 
-Accessing this can be demonstrated by the following program:
+Accessing this can be demonstrated by the following program, which
+I'll call `test.py`:
 {% highlight python %}
 import sys
 print sys.argv
 {% endhighlight %}
-We need to test this from the command line, not IDLE:
+We need to test this from the command line, not inside another program
+such as IDLE:
 {% highlight bash %}
 $ python test.py a b c
 ['test.py', 'a', 'b', 'c']
@@ -171,6 +173,33 @@ it was called; this is generally of little use. So we almost always
 start looking at index 1, the second item. The line `import sys`
 allows us to refer to the `sys` module. Even though it is built-in to
 Python, we need to explicitly state that we are going to use it.
+
+# Running a program
+
+When you run a file like `test.py`, Python will compile the entire
+file and execute anything that is at the outer level of
+indentation. If your file defines functions but you want them to run
+when the program is executed, you need to specify that. Here's a
+modified version of the program above that demonstrates this:
+{% highlight python %}
+import sys
+
+
+def print_args():
+    """Print the command line arguments."""
+    print sys.argv
+
+
+if __name__ == "__main__":
+    print_args()
+{% endhighlight %}
+
+This file defines the `print_args` function and then will run it the
+file is run as a program. The purpose of the block under
+`if __name__ == "__main__"` 
+is so that if the file is imported--used to define functions--rather
+than run as a main program, it won't run the `print_args` function,
+just define it.
 
 # Putting it all together
 

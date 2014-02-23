@@ -253,7 +253,7 @@ This manifests itself when considering the question "will changing
 this object affect anything else?". For example:
 {% highlight python %}
 >>> x = 7
->>> y = 7
+>>> y = x
 >>> x += 1
 >>> x
 8
