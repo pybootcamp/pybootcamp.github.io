@@ -4,13 +4,15 @@ title: Home
 ---
 
 # Tutorials
-## Basic Python
+## Basics
 1. [Introduction](bootcamp/introduction.html)
 1. [Writing your first program](bootcamp/firstprogram.html)
 1. [Basic data structures](bootcamp/structures.html)
 1. [Iteration](bootcamp/iteration.html)
-1. [Anti-patterns](bootcamp/anti-patterns.html)
 1. [Exercises](bootcamp/exercises.html)
+
+## Intermediate
+1. [Anti-patterns](bootcamp/anti-patterns.html)
 
 
 ## Modules
@@ -30,9 +32,11 @@ Austen's _Pride and Prejudice_.
 Run:  
 `python cat.py pp_ch1.txt pp_ch2.txt`
 1. [concordance](examples/concordance.py): Builds a concordance from a
-text file, such as [the first chapter of _Pride and Prejudice_](examples/pp_ch1.txt).
+text file, such as [the first chapter of _Pride and
+Prejudice_](examples/pp_ch1.txt) and report statistics for a word in
+it.
 Run:  
-`python concordance.py pp_ch1.txt`
+`python concordance.py pp_ch1.txt wife`
 
 ---
 
