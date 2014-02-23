@@ -100,7 +100,7 @@ to their frequencies from a file that looked like this:
 
 This can easily be written as a dictionary comprehension:
 {% highlight python %}
-word_freqs = {word: freq for line in in_file for freq, word in line.split()}
+word_freqs = {line.split()[1]: int(line.split()[0]) for line in in_file}
 {% endhighlight %}
 
 We can make a modified copy of a dictionary easily using a dictionary
@@ -108,7 +108,7 @@ comprehension:
 
 {% highlight python %}
 # Make a new dictionary with one added to every frequency
-word_freqs2 = {word: freq + 1 for freq, word in word_freqs.iteritems()}
+word_freqs2 = {word: freq + 1 for word, freq in word_freqs.iteritems()}
 {% endhighlight %}
 
 You'll noticed I used `iteritems` instead of the normal `items`. There
