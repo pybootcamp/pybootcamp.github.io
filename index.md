@@ -12,6 +12,7 @@ title: Home
 1. [Exercises](bootcamp/exercises.html)
 
 ## Intermediate
+1. [Classes](bootcamp/classes.html)
 1. [More on iteration](bootcamp/iteration2.html)
 1. [Anti-patterns](bootcamp/anti-patterns.html)
 1. [Odds and ends](bootcamp/odds-ends.html)
@@ -29,6 +30,8 @@ concatenates files given as arguments, such as chapters
 Austen's _Pride and Prejudice_.
 Run:  
 `python cat.py pp_ch1.txt pp_ch2.txt`
+1. [totaldict](examples/totaldict.py): Demonstrates inheritance from a
+built-in class.
 1. [concordance](examples/concordance.py): Builds a concordance from a
 text file, such as [the first chapter of _Pride and
 Prejudice_](examples/pp_ch1.txt) and report statistics for a word in
