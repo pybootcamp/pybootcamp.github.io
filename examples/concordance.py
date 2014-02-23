@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Example concordance program."""
 
 import sys
@@ -8,12 +9,7 @@ from collections import Counter, defaultdict
 
 
 class Concordance(object):
-    """A concordance for a text, tracking word frequency and occuring lines.
-
-    >>> c = Concordance("pp_ch1.txt")
-    >>> c.lookup("wife")
-    ('wife', 4, ['of a good fortune, must be in want of a wife.', '"Do you not want to know who has taken it?" cried his wife impatiently.', '"My dear Mr. Bennet," replied his wife, "how can you be so tiresome! You', 'been insufficient to make his wife understand his character. _Her_ mind'])
-    """
+    """A concordance for a text, tracking word frequency and occuring lines."""
 
     def __init__(self, file_path):
         """Populate the concordance using the text in file_path."""
@@ -21,23 +17,26 @@ class Concordance(object):
         self.index = defaultdict(list)
         with open(file_path) as f:
             for line in f:
-                line = line.strip()
-                tokens = set()
-                for token in tokenize(line):
-                    self.counter[token] += 1
-                    if token not in tokens:
-                        self.index[token].append(line)
-                        tokens.add(token)
+                line = line.rstrip()
+                # Count all occurences of each token
+                tokens = tokenize(line)
+                self.counter.update(tokens)
+                # Only add the line once for each unique token in the
+                # line. For example, if 'the' appears twice in the
+                # line, the line should only appear once in the index
+                # for 'the'.
+                for token in set(tokens):
+                    self.index[token].append(line)
 
     def lookup(self, word):
-        """Get the lookup results for the word passed in.
+        """Return the sanitized version of the word, its frequency, and the line it appears in.
 
-        Raises a ConcordanceWordNotFoundError if the word is not found."""
+        Raises a ValueError if the word is not in the concordance."""
         clean_word = clean_token(word)
         if clean_word in self.index:
             return clean_word, self.counter[clean_word], self.index[clean_word]
         else:
-            raise ConcordanceWordNotFoundError("Couldn't find word {!r}.".format(clean_word))
+            raise ValueError("Unknown word: {!r}.".format(clean_word))
 
 
 def main():
@@ -46,6 +45,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Build and query a concordance of the specified file.")
     parser.add_argument("file", help="file to build a concordance from")
+    parser.add_argument("word", help="word to print statistics for")
     args = parser.parse_args()
 
     # Make a concordance from the file
@@ -53,40 +53,17 @@ def main():
         concord = Concordance(args.file)
     # We'll get an IOError if the file cannot be opened
     except IOError:
-        print >> sys.stderr, "Couldn't open the input file {!r}.".format(sys.argv[1])
+        print >> sys.stderr, "Couldn't open input file {!r}.".format(sys.argv[1])
         sys.exit(1)
 
-    # Take input from the user. If the user enters a blank line or interrupts, exit.
-    print 'Enter a word to look it up in the concordance.'
-    print 'Enter a blank line to exit.'
-    while True:
-        # Get user input
-        try:
-            user_input = raw_input('> ')
-        except KeyboardInterrupt:
-            break
-        # If the user entered something, look it up. Otherwise, exit
-        if user_input:
-            try:
-                word, freq, contexts = concord.lookup(user_input)
-                print "{} ({})".format(word, freq)
-                for line in contexts:
-                    print line
-                print
-            except ConcordanceWordNotFoundError:
-                print "The word {!r} was not found.".format(user_input)
-                print
-        else:
-            break
-
-    # Exit if we're out of the loop.
-    print 'Exiting...'
-    sys.exit()
-
-
-class ConcordanceWordNotFoundError(IOError):
-    """A requested word was not found."""
-    pass
+    # Look up the word
+    try:
+        word, freq, contexts = concord.lookup(args.word)
+        print "{} ({})".format(word, freq)
+        for line in contexts:
+            print line
+    except ValueError:
+        print "The word {!r} was not found.".format(args.word)
 
 
 def clean_token(token):
