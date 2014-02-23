@@ -12,14 +12,12 @@ title: Home
 1. [Exercises](bootcamp/exercises.html)
 
 ## Intermediate
+1. [More on iteration](bootcamp/iteration2.html)
 1. [Anti-patterns](bootcamp/anti-patterns.html)
-
+1. [Odds and ends](bootcamp/odds-ends.html)
 
 ## Modules
-1. csv
-1. argparse
-1. (Brief) overview of scientific/numeric computing
-1. Other topics by request!
+1. [CSV](bootcamp/csv.html)
 
 ---
 
