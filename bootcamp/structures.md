@@ -29,8 +29,6 @@ and the items in them do not need to be the same type:
 lyrics[0] = 'His'
 lyrics[3] = 7
 {% endhighlight %}
-You cannot change the contents of a string, but you can make a new
-string instead.
 
 ## Working with lists
 
@@ -193,7 +191,71 @@ You can fix this by either checking in advance for whether a key is in
 the dictionary or by handling the exception, which we'll talk about
 later.
 
-# String formatting
+# Strings
+
+Strings are a sequence type, so they can be sliced and iterated over just like a
+list:
+{% highlight python %}
+>>> word = "happy"
+>>> word[1:3]
+'ap'
+>>> for letter in word:
+        print letter
+   
+h
+a
+p
+p
+y
+{% endhighlight %}
+
+However, they are _immutable_, so unlike a list you cannot change the
+contents of a string object.
+
+{% highlight python %}
+>>> word[0] = "s"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+{% endhighlight %}
+
+Rather than modifying a string, you just can just replace it with
+another one:
+
+{% highlight python %}
+>>> word = "sappy"
+{% endhighlight %}
+
+## String methods
+
+Here are some popular ones you may need:
+ 
+* `startswith` and `endswith` can be used to check the beginning and
+ends of strings.
+* `split` can be used to break a string on a delimiter. If you don't
+specify a delimiter, it will break on whitespace.
+* `strip` removes characters at the beginning and end of a string. By
+default, it will take off all the whitespace, which is very handy when
+reading files.
+* `join` places a delimiter between elements of a sequence of
+strings. Note that this method is called on the *delimiter*, not the
+sequence.
+
+Examples:
+{% highlight python %}
+>>> "file.py".endswith(".py")
+True
+>>> " 1 2 3 ".split()
+['1', '2', '3']
+>>> "Abracadabra".split("a")
+['Abr', 'c', 'd', 'br', '']
+>>> " The quick brown fox \n".strip()
+'The quick brown fox'
+>>> ", ".join(["cats", "dogs", "elephants"])
+'cats, dogs, elephants'
+{% endhighlight %}
+
+## String formatting
 
 You often want to print out strings nicely, as a part of normal
 operation or debugging. This is best accomplished by using the
@@ -219,6 +281,17 @@ First word: 'Her'
 2/3 is 0.666666666667
 >>> print "2/3 is {:0.2f}".format(2.0 / 3.0)
 2/3 is 0.67
+{% endhighlight %}
+
+You can use indices to control the order in which strings are
+interpolated (placed into the host string). If you leave them out,
+strings will be interpolated in the order given:
+
+{% highlight python %}
+>>> "{} spam! {} spam!".format("Lovely", "Wonderful")
+'Lovely spam! Wonderful spam!'
+>>> "{1} {0}! {2} {0}!".format("spam", "Lovely", "Wonderful")
+'Lovely spam! Wonderful spam!'
 {% endhighlight %}
 
 By default, format coaxes its arguments into the prettiest strings
