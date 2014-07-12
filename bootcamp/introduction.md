@@ -82,7 +82,10 @@ are called "variables" in most programming languages are technically called
 Note that you don't have to declare variables in advance and you don't tell
 Python what _type_ (string, integer, etc.) a variable will have.
 
-## Useful built-in functions
+## Handy built-in functions
+
+These are very useful when you're trying to sort out issues in the REPL.
+You'll rarely need to use these in real programs.
 
 - `type(x)`: see what type `x` is
 {% highlight python %}
@@ -97,4 +100,4 @@ Python what _type_ (string, integer, etc.) a variable will have.
 {% endhighlight %}
 - `dir()`: see what names are bound at the moment
 - `dir(x)`: see all methods that `x` provides
-- `id(x)`: get the identity (effectively memory address) of what `x` refers to
+- `id(x)`: get the identity (effectively memory address) of what `x` refers to.
