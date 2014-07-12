@@ -4,6 +4,7 @@ title: Home
 ---
 
 # Tutorials
+
 ## Basics
 1. [Introduction](bootcamp/introduction.html)
 1. [Writing your first program](bootcamp/firstprogram.html)
@@ -14,7 +15,7 @@ title: Home
 ## Intermediate
 1. [Classes](bootcamp/classes.html)
 1. [More on iteration](bootcamp/iteration2.html)
-1. [Anti-patterns](bootcamp/anti-patterns.html)
+1. [Anti-patterns](http://lignos.org/py_antipatterns/)
 1. [Odds and ends](bootcamp/odds-ends.html)
 
 ## Modules
