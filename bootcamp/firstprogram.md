@@ -136,6 +136,7 @@ def print_file(filename):
 {% endhighlight %}
 
 A few things to note:
+
 1. We define a function by using the `def` keyword, then providing the
 name of the function and the variable names we want to use for the
 arguments given to it. Like `for`, `def` creates a block so we must
@@ -206,6 +207,7 @@ just define it.
 Now, to test your abilities, take on your first program. It is meant
 to be a simplified version of `cat`, a tool which concatenates the
 files given to it. It should:
+
 1. Take a list of files to open as command line arguments.
 1. For each file specified, print its contents.
 
@@ -223,6 +225,10 @@ need to get all but the first element out of `sys.argv`. The easiest
 way to do this is to do something like the following, which will be
 explained soon:  
 `filenames = sys.argv[1:]`
+
+You can use the [first](../examples/pp_ch1.txt) and
+[second](../examples/pp_ch2.txt) chapters of _Pride and Prejudice_ as
+files to concatenate.
 
 When you're done, take a look at [cat.py](../examples/cat.py) which
 provides a solution.

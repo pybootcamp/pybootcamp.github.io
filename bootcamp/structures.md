@@ -122,6 +122,8 @@ lyrics2 = lyrics.append('and')
 
 # Maps
 
+Map basics:
+
 - Maps store a relationship between two things, a _key_ and a
 _value_.
 - The only map we care about is a dictionary, the type `dict`.
