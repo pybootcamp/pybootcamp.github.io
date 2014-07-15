@@ -31,6 +31,12 @@ concatenates files given as arguments, such as chapters
 Austen's _Pride and Prejudice_.
 Run:  
 `python cat.py pp_ch1.txt pp_ch2.txt`
+1. [make_wordlist](examples/make_wordlist.py): Create a
+frequency-sorted wordlist from a tokenized text file. Use the
+[tokenized version of chapters 1-2 of _Pride and
+Prejudice_](../examples/pp_ch1-2_tokenized.txt) as input.
+Run:  
+`python make_wordlist.py pp_ch1-2_tokenized.txt > wordlist.txt`
 1. [totaldict](examples/totaldict.py): Demonstrates inheritance from a
 built-in class.
 1. [concordance](examples/concordance.py): Builds a concordance from a
