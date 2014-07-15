@@ -64,3 +64,16 @@ your solutions or organize them differently. Some suggestions:
 - Take a look at [Python
 collections](http://docs.python.org/2/library/collections.html) and
 reimplement these exercises. Isn't that easier?
+
+# Another challenge
+
+If you've made it this far, nice work!
+
+Now it's time to make your own wordlist. Assume you have a file that's
+a [tokenized version of chapters 1-2 of _Pride and
+Prejudice_](../examples/pp_ch1-2_tokenized.txt). Write a program that
+will produce a wordlist from it. The output should look like [this
+wordlist](../examples/pp_ch1-2_wordlist.txt).
+
+For an example solution, look at
+[make_wordlist.py](../examples/make_wordlist.py).
