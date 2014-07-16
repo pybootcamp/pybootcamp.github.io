@@ -206,7 +206,10 @@ the previous function.
 
 To show that the counts are correct, you should call get the 10 most
 common words using the `most_common` method on the counter and print
-each word and its count. The output should look like the following:
+each word and its count. When run on the input files
+[pp_ch1_tokenized.txt](../examples/pp_ch1_tokenized.txt) and
+[pp_ch2_tokenized.txt](../examples/pp_ch2_tokenized.txt),
+the output should look like the following:
 
 <pre>
 $ python count_words.py pp_ch1_tokenized.txt pp_ch2_tokenized.txt
