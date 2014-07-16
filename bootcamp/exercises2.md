@@ -39,10 +39,9 @@ Your output should look like the following for the first five years:
 year,mean,median
 1945,81.33333333333333,82
 1946,47.0,46.5
-1947,51.0,57.0
+1947,51.0,54.5
 1948,37.5,37.5
 1949,58.5,57.0
-1950,41.75,41.5
 </pre>
 
 An example solution is available in

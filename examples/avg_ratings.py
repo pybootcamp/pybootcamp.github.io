@@ -13,6 +13,7 @@ def mean(nums):
 
 def median(nums):
     """Compute the median of a series of numbers."""
+    nums = sorted(nums)
     # If odd, just get the middle index
     if len(nums) % 2:
         # Use int division to round it downward to get the middle
