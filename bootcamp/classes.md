@@ -28,7 +28,8 @@ adds a wait to count the total.
 # Anatomy of a class
 
 For now, let's consider a class whose goal it is to count upwards from
-zero and reset the count if requested:
+zero and reset the count if requested. This class is contained in
+[counter.py](../examples/counter.py).
 
 {% highlight python %}
 class Counter(object):
