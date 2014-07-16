@@ -75,6 +75,7 @@ Usage of this would look like:
 {% endhighlight %}
 
 A few things to note:
+
 1. Unlike many object-oriented languages, there's no formal way to
 define public/private methods and members. Informally, underscores are
 used: `count` is public, while `_count` is private.
