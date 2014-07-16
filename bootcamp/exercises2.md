@@ -74,6 +74,24 @@ file in a new `Employee` object in the dictionary.
 one per line, separated by a colon. For example, a line would be: 
 `372: John Smith, Researcher (372)`.
 
+Hints:
+
+1. You will need to put together the name of the directory of files
+and the individual filenames in order to open them. Use
+`os.path.join`.
+1. You can assume the first line of each file contains the name field
+and that the second line contains the title field. (If you want an
+extra challenge, write a solution that does not make this assumption.)
+1. You can use `split` to parse each string in the file. If you want
+an additional challenge, use a regular expression, using the module `re`.
+1. You should not assume that a name only consists of a first and last
+name; your solution should still work if the name is "John Q Public."
+If you notice that you are only extracting the first name, you are
+probably using `split` incorrectly.
+
+An example solution is available in
+[employee_info.py](../examples/employee_info.py).
+
 
 # On your own
 
