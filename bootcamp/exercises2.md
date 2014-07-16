@@ -30,3 +30,7 @@ As some quarters are missing ratings (`NA`) you will have to exclude
 those from the mean/median calculations. You should write functions to
 calculate the mean and median of a list of numbers and remove any `NA`
 from the list before passing it to those functions.
+
+# On your own
+
+Now's a great time to come up with your own exercise and try it out!
