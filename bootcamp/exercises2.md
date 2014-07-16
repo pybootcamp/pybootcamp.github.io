@@ -15,9 +15,11 @@ Skills used: CSV reading, basic math, dealing with data
 Your task is to write a program that summarizes the data contained in
 [presidents.csv](../examples/presidents.csv). This contains data from
 the `presidents` dataset in R, quarterly approval ratings of US
-presidents.
+presidents. Your program `avg_ratings.py` should take two filenames as
+command-line arguments: the CSV file to read (`presidents.csv`) and
+the output filename.
 
-The csv file contains three columns: `id` is a unique identifier for
+The input file contains three columns: `id` is a unique identifier for
 each row, `year` gives the year and quarter of the rating, and
 `rating` gives the approval rating.
 
@@ -30,6 +32,21 @@ As some quarters are missing ratings (`NA`) you will have to exclude
 those from the mean/median calculations. You should write functions to
 calculate the mean and median of a list of numbers and remove any `NA`
 from the list before passing it to those functions.
+
+Your output should look like the following for the first five years:
+
+<pre>
+year,mean,median
+1945,81.33333333333333,82
+1946,47.0,46.5
+1947,51.0,57.0
+1948,37.5,37.5
+1949,58.5,57.0
+1950,41.75,41.5
+</pre>
+
+An example solution is available in
+[avg_ratings.py](../examples/avg_ratings.py).
 
 # Employee database
 
