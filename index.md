@@ -13,10 +13,11 @@ title: Home
 1. [Exercises](bootcamp/exercises.html)
 
 ## Intermediate
-1. [Classes](bootcamp/classes.html)
 1. [More on iteration](bootcamp/iteration2.html)
 1. [Anti-patterns](http://lignos.org/py_antipatterns/)
+1. [Classes](bootcamp/classes.html)
 1. [Odds and ends](bootcamp/odds-ends.html)
+1. [Exercises](bootcamp/exercises2.html)
 
 ## Modules
 1. [CSV](bootcamp/csv.html)
