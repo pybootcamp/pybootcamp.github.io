@@ -2,7 +2,6 @@
 layout: bare
 title: Intermediate exercises
 ---
-Use numbered headers: true
 
 <h1>Contents</h1>
 * TOC

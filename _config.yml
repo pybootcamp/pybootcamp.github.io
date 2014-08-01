@@ -1,8 +1,8 @@
 name: Python Boot Camp for Researchers
-markdown: maruku
+markdown: kramdown
 encoding: UTF-8
 safe: true
 lsi: false
-pygments: true
+highlight: pygments
 relative_permalinks: false
 analytics: "on"

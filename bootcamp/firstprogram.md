@@ -2,7 +2,6 @@
 layout: bare
 title: Writing your first program
 ---
-Use numbered headers: true
 
 <h1>Contents</h1>
 * TOC
