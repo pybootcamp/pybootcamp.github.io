@@ -3,8 +3,9 @@ layout: bare
 title: Intermediate exercises
 ---
 
-<h1>Contents</h1>
-* TOC
+# Contents
+{:.no_toc}
+1. TOC
 {:toc}
 
 # Presidential ratings

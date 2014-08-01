@@ -3,8 +3,9 @@ layout: bare
 title: Odds and Ends
 ---
 
-<h1>Contents</h1>
-* TOC
+# Contents
+{:.no_toc}
+1. TOC
 {:toc}
 
 # Argument parsing using argparse

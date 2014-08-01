@@ -3,8 +3,9 @@ layout: bare
 title: Introduction
 ---
 
-<h1>Contents</h1>
-* TOC
+# Contents
+{:.no_toc}
+1. TOC
 {:toc}
 
 # Why use Python?

@@ -3,8 +3,9 @@ layout: bare
 title: Writing your first program
 ---
 
-<h1>Contents</h1>
-* TOC
+# Contents
+{:.no_toc}
+1. TOC
 {:toc}
 
 # Basic math

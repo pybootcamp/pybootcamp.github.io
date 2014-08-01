@@ -3,8 +3,9 @@ layout: bare
 title: Using the CSV module
 ---
 
-<h1>Contents</h1>
-* TOC
+# Contents
+{:.no_toc}
+1. TOC
 {:toc}
 
 # Understanding CSVs
