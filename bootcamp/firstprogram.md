@@ -63,6 +63,10 @@ write `x++` to add one to `x`. This doesn't work in Python. Instead,
 write `x += 1`. Note that Python similarly supports `-=`, `*=`, and
 `/=`.
 
+**Mini-assignment**: Clear out the above program. Without copying the
+ above example, write a program where you set two variables to two
+ numbers and print the result of some arithmetic operation on them.
+
 # Simple loops
 
 For the moment, we're going to explore the most basic loop in Python,
@@ -98,6 +102,10 @@ Note that each time you `print`, by default it puts each item on its
 own line. If you don't want this, put a comma after the item being
 printed:  
 ` print item,`
+
+**Mini-assignment**: Clear out the above program. Without copying the
+ above example, write a program where you put a few objects in a list
+ and print them.
 
 # Reading from files
 
@@ -148,6 +156,19 @@ to explain what the function does.
 1. When we print, we call the method `rstrip` on the string. This
 removes any trailing whitespace. When reading a file, each line will
 end with a newline marker until we explicitly remove it.
+
+Functions can also return a value, for example we may want to set a
+variable to the result of calling a function:
+{% highlight python %}
+def increment(num):
+    """Return the input number increased by one."""
+    return num + 1
+{% endhighlight %}
+
+**Mini-assignment**: Without copying the above example, write a
+  function that takes two variables as arguments and returns the
+  result of an arithmetic operation on them. For example, you could
+  add two numbers together and return the result.
 
 # Command-line arguments
 

@@ -27,7 +27,6 @@ and powerful packages in the standard library.
 replace them take some getting used to.
 1. The compiler will not stop you from shooting yourself in the foot
 1. No enforcement of contracts/interfaces
-1. Lots of things can go wrong at runtime that are hard to see coming
 
 # How Python works
 
@@ -39,7 +38,7 @@ reported as they happen
 
 # Some basics
 
-1. Start out by running `python` or `IDLE` to try out typing things in
+1. Start out by running `python` or an IDE such as `IDLE` or `Spyder` to try out typing things in
 the interpreter.
 1. Typing directly into the interpreter is called a `REPL`: Read Eval
 Print Loop. It reads your input line-by-line and prints results.

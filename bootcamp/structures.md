@@ -139,22 +139,21 @@ braces (`[]`) are used for lookup, just like lists.
 
 {% highlight python %}
 Creating a new empty dictionary
-nums_to_words = {}
+words_to_nums = {}
 # Assigning a value to a key in the dictionary
-nums_to_words[1] = 'one'
+words_to_nums['one'] = 1
 # Getting a value from the dictionary using a key
-word = nums_to_words[1]
+num = words_to_nums['one']
 # Deleting a key from the dictionary
-del nums_to_words[1]
+del words_to_nums['one']
 # Creating a new dictionary with items in it
-nums_to_words = {1: 'one', 2: 'two', 3: 'three'}
+words_to_nums = {'one': 1, 'two': 2, 'three': 3}
 {% endhighlight %}
 
-In this example the keys of the dictionary are integers, which
-highlights the facts that just by looking at it it's hard to tell
-what's different between a `list` and `dict`. The keys in a `dict` can
-be any _immutable_ type, which we'll define later, but for the moment
-contains strings, integers, and tuples but not lists or dictionaries.
+In this example the keys of the dictionary are strings. The keys in a
+`dict` can be any _immutable_ type, which we'll define later, but for
+the moment contains strings, integers, and tuples but not lists or
+dictionaries.
 
 You can iterate over keys, values, or both using a for loop
 {% highlight python %}
@@ -179,14 +178,14 @@ if key in adict:
 
 What if a key doesn't exist? An _exception_ occurs.
 {% highlight python %}
->>> nums_to_words = {1:'one', 2:'two', 3:'three'}
->>> nums_to_words[1]
-'one'
->>> nums_to_words[4]
+>>> words_to_nums = {'one': 1, 'two': 2, 'three': 3}
+>>> words_to_nums['one']
+1
+>>> nums_to_words['four']
 Traceback (most recent call last):
   File "<pyshell#19>", line 1, in <module>
-    nums_to_words[4]
-KeyError: 4
+    words_to_nums['four']
+KeyError: 'four'
 {% endhighlight %}
 
 You can fix this by either checking in advance for whether a key is in
