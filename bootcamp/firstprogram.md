@@ -63,10 +63,6 @@ write `x++` to add one to `x`. This doesn't work in Python. Instead,
 write `x += 1`. Note that Python similarly supports `-=`, `*=`, and
 `/=`.
 
-**Mini-assignment**: Clear out the above program. Without copying the
- above example, write a program where you set two variables to two
- numbers and print the result of some arithmetic operation on them.
-
 # Simple loops
 
 For the moment, we're going to explore the most basic loop in Python,
