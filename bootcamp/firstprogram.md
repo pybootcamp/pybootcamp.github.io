@@ -99,7 +99,7 @@ own line. If you don't want this, put a comma after the item being
 printed:  
 ` print item,`
 
-**Mini-assignment**: Clear out the above program. Without copying the
+**Mini-exercise**: Clear out the above program. Without copying the
  above example, write a program where you put a few objects in a list
  and print them.
 
@@ -161,7 +161,7 @@ def increment(num):
     return num + 1
 {% endhighlight %}
 
-**Mini-assignment**: Without copying the above example, write a
+**Mini-exercise**: Without copying the above example, write a
   function that takes two variables as arguments and returns the
   result of an arithmetic operation on them. For example, you could
   add two numbers together and return the result.
