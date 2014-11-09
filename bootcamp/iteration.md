@@ -8,30 +8,6 @@ title: Control flow
 1. TOC
 {:toc}
 
-# Iteration over sequences
-
-In previous sections, we've covered how to iterate over sequences
-using `for`. We'll go over ways _not_ to iterate over sequences in the
-next section.
-
-Some things we didn't mention earlier:
-- You can use the `break` command to exit from a `for` loop
-prematurely. For example, if you were looking for one thing and you
-found it, you might `break` rather than wasting time processing the
-rest of the entries.
-- You can use `continue` to skip to the next entry. For example, if
-you only want to process words that start with `'a'`, you might check
-whether each item starts with that and skip the others.
-
-{% highlight python %}
-for item in items:
-    if item[0] != 'a':
-        continue
-    else:
-        do_something(item)
-{% endhighlight %}
-
-
 # Basic conditionals
 
 The previous example brought up the basic structure of a Python
@@ -67,6 +43,44 @@ while not done:
 {% endhighlight %}
 
 This loop will automatically stop running when `done` is set to `True`.
+
+
+# Iteration tricks
+
+Some things we didn't mention earlier:
+
+- You can use the `break` keyword to exit from loop prematurely. For
+example, if you were looking for one thing and you
+found it, you might `break` rather than wasting time processing the
+rest of the entries.
+- You can also use an `else` clause in a `for` loop to give an action
+to be performed when iteration is complete.
+
+Here's an example using both. Let's say we want to find the index of
+the first negative item in a list. We iterate over the list and return
+the index when we find one.
+
+{% highlight python %}
+for idx, item in alist:
+    if item < 0:
+        result = idx
+        break
+else:
+    result = None
+{% endhighlight %}
+
+Also, you can use `continue` to skip to the next iteration. For
+example, if you only want to process positive numbers, you might check
+each item and skip some.
+
+{% highlight python %}
+for item in items:
+    # Skip any non-positive items
+    if item <= 0:
+        continue
+
+    do_something(item)
+{% endhighlight %}
 
 # Exceptions
 
