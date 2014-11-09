@@ -52,6 +52,11 @@ appears. For example, if 'he' has a frequency of 9548, count that we
 saw 'h' 9548 times and 'e' 9548 times. Print out the frequency of each
 letter computed in this fashion over the wordlist.
 
+## Solution
+
+For an example solution, look at
+[read_wordlist.py](../examples/read_wordlist.py).
+
 
 # Extensions
 
